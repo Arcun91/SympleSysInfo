@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Info di sistema</title>
+</head>
+<body>
+<script>
+var os = require('os');
+</script>
+<div>
+    <p>
+        Sistema Operativo : <script>document.write(os.platform())</script> 
+    </p>
+    <p>
+        Architettura : <script>document.write(os.arch())</script> 
+    </p>
+    <p>
+        CPU : <script>document.write(os.cpus()[0].model)</script> 
+    </p>
+    <p>
+        N. Core : <script>document.write(os.cpus().length)</script> 
+    </p>
+    <p>
+        Memoria totale : <script>document.write(Math.round(os.totalmem()/1000000))</script>  MB
+    </p>
+    <p>
+        Memoria libera : <script>document.write(Math.round(os.freemem()/1000000))</script> MB 
+    </p>
+    <p>
+        Acceso da : <script>
+            var time = os.uptime();
+            var minutes = Math.floor(os.uptime()/60);
+            var seconds = time - minutes * 60
+            document.write(minutes, ".", seconds)
+        </script> minuti 
+    </p>
+</div>
+</body>
+</html>
