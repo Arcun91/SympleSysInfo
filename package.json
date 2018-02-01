@@ -1,4 +1,7 @@
 {
-  "name": "Info di sistema",
-  "main": "index.html"
+  "name": "System Info",
+  "main": "index.html",
+  "dependencies": {
+    "jsdom": "^11.6.2"
+  }
 }
