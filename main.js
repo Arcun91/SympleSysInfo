@@ -1,22 +1,39 @@
 const os = require('os');
-const jsdom = require("jsdom");
-const { JSDOM } = jsdom;
+var generateDom = require("./js/generateDom.js");
+var info = require("./js/info.js");
+
 setInterval(function(){
     var time = os.uptime();
     var minutes = Math.floor(os.uptime()/60);
     var seconds = time - minutes * 60
+    var platform;
+    switch(os.platform()){
+        case "darwin":platform = "MacOS"; break;
+        case "freebsd":platform = "BSD"; break;
+        case "linux":platform = "Linux"; break;
+        case "openbsd":platform = "BSD"; break;
+        case "sunos":platform = "SUN"; break;
+        case "win32":platform = "Windows"; break;
+        default: platform = os.platform(); break;
+    }
 
-    document.write (new JSDOM(
-        "<p>Sistema Operativo: "+os.platform()+"<p>"+
-        "<p>Architettura: "+os.arch()+"<p>"+
-        "<p>CPU: "+os.cpus()[0].model+"<p>"+
-        "<p>Core: "+os.cpus().length+"</p>"+
-        "<p>Memoria Totale: "+Math.round(os.totalmem()/1000000)+" MB</p>"+
-        "<p>Memoria Libera: "+Math.round(os.freemem()/1000000)+" MB</p>"+
-        "<p>Acceso da: "+minutes +" minuti e "+ seconds+" secondi</p>"
-    ).serialize());
-    document.close();
-}, 1000);
+    Promise.all([
+            info.getBiosInfo(), 
+            info.getBaseboardInfo(),
+            info.getCpuInfo()        
+        ]).then(values =>{
+        var dom = generateDom.generate(platform, minutes, seconds, values[0], values[1], values[2])
+        document.write (dom.serialize());
+        document.querySelector('head').innerHTML += '<link rel="stylesheet" href="style.css" type="text/css"/>';    
+        document.close();
+    });
+
+    //info.getBiosInfo().then(function(res){
+        
+    //})
+}, 3000);
+
+
 
 
 
