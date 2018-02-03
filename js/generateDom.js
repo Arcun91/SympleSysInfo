@@ -20,7 +20,7 @@ exports.generate = (platform, minutes, seconds, bios, baseboard, cpu) => new JSD
     "<h1>CPU: </h1>"+
     "<p>Produttore: "+cpu.manufacturer+"</p>"+
     "<p>Brand: "+cpu.brand+"</p>"+
-    "<p>Core: "+os.cpus().length+" oppure:"+cpu.cores+"</p>"+
+    "<p>Core: "+os.cpus().length+"</p>"+
     "<p>Cache L1D: "+cpu.cache.l1d/1000+" KB</p>"+
     "<p>Cache L1L: "+cpu.cache.l1i/1000+" KB</p>"+
     "<p>Cache L2: "+cpu.cache.l2/1000+" KB</p>"+

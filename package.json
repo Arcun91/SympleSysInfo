@@ -2,6 +2,7 @@
   "name": "System Info",
   "main": "index.html",
   "dependencies": {
-    "jsdom": "^11.6.2"
+    "jsdom": "^11.6.2",
+    "systeminformation": "^3.33.18"
   }
 }
