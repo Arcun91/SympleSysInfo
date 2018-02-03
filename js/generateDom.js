@@ -3,7 +3,7 @@ const os = require('os');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 const si = require('systeminformation');
-
+ 
 exports.generate = (platform, minutes, seconds, bios, baseboard, cpu) => new JSDOM(
     "<h1>Info generali</h1>"+
     "<p>Sistema Operativo: "+platform+"<p>"+
