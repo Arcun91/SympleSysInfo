@@ -13,7 +13,19 @@ var cpu = function(){
     return si.cpu().then(data => {return data})
 }
 
+var cpuSpeed = function(){
+    return si.cpuCurrentspeed().then(data => {return data})
+}
 
-exports.getBiosInfo = bios;
-exports.getBaseboardInfo = baseboard;
-exports.getCpuInfo = cpu;
+var cpuTemperature = function(){
+    return si.cpuTemperature().then(data => {return data})
+}
+
+var mem = function(){
+    return si.mem().then(data => {return data});
+}
+
+var memLayout = function(){
+    return si.memLayout().then(data => {return data});
+}
+exports.getInfos = [bios(), baseboard(), cpu(), cpuSpeed(), cpuTemperature(), mem(), memLayout()];

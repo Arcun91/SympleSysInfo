@@ -3,6 +3,7 @@
   "main": "index.html",
   "dependencies": {
     "jsdom": "^11.6.2",
-    "systeminformation": "^3.33.18"
+    "systeminformation": "^3.33.18",
+    "underscore": "^1.8.3"
   }
 }

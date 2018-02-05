@@ -2,6 +2,8 @@ const os = require('os');
 var generateDom = require("./js/generateDom.js");
 var info = require("./js/info.js");
 
+document.getElementsByTagName("title")[0].innerHTML = "Info di sistema"
+
 setInterval(function(){
     var time = os.uptime();
     var minutes = Math.floor(os.uptime()/60);
@@ -17,21 +19,11 @@ setInterval(function(){
         default: platform = os.platform(); break;
     }
 
-    Promise.all([
-            info.getBiosInfo(), 
-            info.getBaseboardInfo(),
-            info.getCpuInfo()        
-        ]).then(values =>{
-        var dom = generateDom.generate(platform, minutes, seconds, values[0], values[1], values[2])
-        document.write (dom.serialize());
-        document.querySelector('head').innerHTML += '<link rel="stylesheet" href="style.css" type="text/css"/>';    
-        document.close();
+    Promise.all(info.getInfos).then(values =>{
+        var dom = generateDom.generate(platform, minutes, seconds, values[0], values[1], values[2], values[3], values[4], values[5], values[6])
+        document.getElementById("content").innerHTML = dom.serialize();
     });
-
-    //info.getBiosInfo().then(function(res){
-        
-    //})
-}, 3000);
+}, 1000);
 
 
 
