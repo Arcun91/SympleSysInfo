@@ -28,4 +28,8 @@ var mem = function(){
 var memLayout = function(){
     return si.memLayout().then(data => {return data});
 }
-exports.getInfos = [bios(), baseboard(), cpu(), cpuSpeed(), cpuTemperature(), mem(), memLayout()];
+
+exports.getInfos = [mem()];
+exports.mainboard = [bios(), baseboard()];
+exports.cpu = [cpu(), cpuSpeed(), cpuTemperature()];
+exports.memory = [mem(), memLayout()];

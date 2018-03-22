@@ -1,11 +1,123 @@
-<!DOCTYPE html>
+
 <html>
+
 <head>
-  <link href="style.css" rel="stylesheet" type="text/css">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="bower_components/morris.js/morris.css">
+  <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
+  <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   <title>System info</title>
 </head>
-<body>
-    <script src="main.js"></script>
-    <div id="content"></div>
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+
+    <header class="main-header">
+      <a href="javascript:void(0);" class="logo">
+        <span class="logo-mini">
+          <b>S</b>IN</span>
+        <span class="logo-lg">
+          <b>System</b>Info</span>
+      </a>
+      <nav class="navbar navbar-static-top">
+        <!--<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>-->
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <!--<li>
+              <a href="#" data-toggle="control-sidebar">
+                <i class="fa fa-gears"></i>
+              </a>
+            </li> -->
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <aside class="main-sidebar">
+      <section class="sidebar">
+        <!--<form action="#" method="get" class="sidebar-form">
+          <div class="input-group">
+            <input type="text" name="q" class="form-control" placeholder="Cerca..." id="search">
+            <span class="input-group-btn">
+              <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                <i class="fa fa-search"></i>
+              </button>
+            </span>
+          </div>
+        </form>-->
+        <ul class="sidebar-menu" data-widget="tree">
+          <li class="header">Navigazione Principale</li>
+          <li>
+            <a href="javascript:void(0);" id="home">
+              <i class="fa fa-dashboard"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" id="mainboard">
+              <i class="fa fa-microchip"></i>
+              <span>Scheda madre</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" id="cpu">
+              <i class="fa fa-microchip"></i>
+              <span>CPU</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" id="memory">
+              <i class="fa fa-save"></i>
+              <span>Memoria</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </aside>
+
+    <div class="content-wrapper">
+      <script src="app.js"></script>
+      <section class="content-header">
+        <h1>
+          SystemInfo
+          <small>Dashboard</small>
+        </h1>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#">
+              <i class="fa fa-dashboard"></i> Home</a>
+          </li>
+          <li class="active">Dashboard</li>
+        </ol>
+      </section>
+      <div id="content" class="content"></div>
+    </div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script>
+      $.widget.bridge('uibutton', $.ui.button);
+    </script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/raphael/raphael.min.js"></script>
+    <script src="bower_components/morris.js/morris.min.js"></script>
+    <script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+    <script src="bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
+    <script src="bower_components/moment/min/moment.min.js"></script>
+    <script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="dist/js/adminlte.min.js"></script>
+    <script src="dist/js/pages/dashboard.js"></script>
+    <script src="dist/js/demo.js"></script>
 </body>
+
 </html>
