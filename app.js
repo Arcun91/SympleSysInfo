@@ -1,6 +1,8 @@
 const os = require('os');
 var generateDom = require("./js/generateDom.js");
 var info = require("./js/info.js");
+var jQuery = require("jQuery");
+var $ = jQuery;
 
 document.getElementsByTagName("title")[0].innerHTML = "Info di sistema"
 
@@ -17,35 +19,23 @@ switch(os.platform()){
     case "win32":platform = "Windows"; break;
     default: platform = os.platform(); break;
 }
-Promise.all(info.getInfos).then(values =>{
-    var dom = generateDom.generate(platform, minutes, seconds, values[0])
+Promise.all(info.home).then(values =>{
+    var dom = generateDom.home(platform, minutes, seconds, values[0])
     document.getElementById("content").innerHTML = dom.serialize();
 });
 
-document.getElementById("home").onclick = function(){
-    Promise.all(info.getInfos).then(values =>{
-        var dom = generateDom.generate(platform, minutes, seconds, values[0], values[1], values[2], values[3], values[4], values[5], values[6])
-        document.getElementById("content").innerHTML = dom.serialize();
-    });
-};
-document.getElementById("mainboard").onclick = function(){
-    Promise.all(info.mainboard).then(values =>{
-        var dom = generateDom.mainboard(values);
-        document.getElementById("content").innerHTML = dom.serialize();
-    });
-};
-document.getElementById("cpu").onclick = function(){
-    Promise.all(info.cpu).then(values =>{
-        var dom = generateDom.cpu(values);
+window.onhashchange = function() { 
+    Promise.all(info[window.location.hash.substring(1)]).then(values =>{
+        var dom = generateDom[window.location.hash.substring(1)](values);
+        if(window.location.hash.substring(1) == "home"){
+            dom = generateDom.home(platform, minutes, seconds, values[0])
+        }
         document.getElementById("content").innerHTML = dom.serialize();
     })
-};
-document.getElementById("memory").onclick = function(){
-    Promise.all(info.memory).then(values =>{
-        var dom = generateDom.memory(values);
-        document.getElementById("content").innerHTML = dom.serialize();
-    });
-};
+}
+
+
+
 
 
 

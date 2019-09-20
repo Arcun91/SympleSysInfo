@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
   <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <script rel="text/javascript" href="bower_components/jquery/dist/jquery.min.js"></script>
   <title>System info</title>
 </head>
 
@@ -56,25 +57,25 @@
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">Navigazione Principale</li>
           <li>
-            <a href="javascript:void(0);" id="home">
+            <a href="#home" id="home">
               <i class="fa fa-dashboard"></i>
               <span>Dashboard</span>
             </a>
           </li>
           <li>
-            <a href="javascript:void(0);" id="mainboard">
+            <a href="#mainboard" id="mainboard">
               <i class="fa fa-microchip"></i>
               <span>Scheda madre</span>
             </a>
           </li>
           <li>
-            <a href="javascript:void(0);" id="cpu">
+            <a href="#cpu" id="cpu">
               <i class="fa fa-microchip"></i>
               <span>CPU</span>
             </a>
           </li>
           <li>
-            <a href="javascript:void(0);" id="memory">
+            <a href="#memory" id="memory">
               <i class="fa fa-save"></i>
               <span>Memoria</span>
             </a>
@@ -85,19 +86,7 @@
 
     <div class="content-wrapper">
       <script src="app.js"></script>
-      <section class="content-header">
-        <h1>
-          SystemInfo
-          <small>Dashboard</small>
-        </h1>
-        <ol class="breadcrumb">
-          <li>
-            <a href="#">
-              <i class="fa fa-dashboard"></i> Home</a>
-          </li>
-          <li class="active">Dashboard</li>
-        </ol>
-      </section>
+
       <div id="content" class="content"></div>
     </div>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>

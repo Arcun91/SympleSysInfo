@@ -1,0 +1,79 @@
+<div class="box">
+    <div class="box-header">
+        <i class="fa fa-{{icon}}"></i><h3 class="box-title">{{title}}</h3>
+    </div>
+    <div class="box-body chat" id="chat-box">
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-green">
+                    <div class="inner">
+                    <h4>Produttore:</h4>
+                    <p>{{exist cpu.manufacturer}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-green">
+                    <div class="inner">
+                    <h4>Brand:</h4>
+                    <p>{{exist cpu.brand}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-green">
+                    <div class="inner">
+                    <h4>Core:</h4>
+                    <p>{{cpuCount}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-green">
+                    <div class="inner">
+                    <h4>Velocità attuale:</h4>
+                    <p>{{cpuSpeed.min}} GHZ</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-green">
+                    <div class="inner">
+                    <h4>Temperatura:</h4>
+                    <p>{{cpuTemperature.main}} C°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-green">
+                    <div class="inner">
+                    <h4>Cache L1D:</h4>
+                    <p>{{kb cpu.cache.l1d}} KB</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-green">
+                    <div class="inner">
+                    <h4>Cache L1L:</h4>
+                    <p>{{kb cpu.cache.l1i}} KB</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-green">
+                    <div class="inner">
+                    <h4>Cache L2:</h4>
+                    <p>{{kb cpu.cache.l2}} KB</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-green">
+                    <div class="inner">
+                    <h4>Cache L3:</h4>
+                    <p>{{kb cpu.cache.l3}} KB</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>

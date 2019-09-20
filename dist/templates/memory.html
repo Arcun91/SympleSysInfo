@@ -1,0 +1,49 @@
+<div class="box">
+    <div class="box-header">
+        <i class="fa fa-{{icon}}"></i><h3 class="box-title">{{title}}</h3>
+    </div>
+    <div class="box-body chat" id="chat-box">
+            {{#each memLayout}}
+                <div class="col-lg-3 col-xs-6">
+                    <div class="small-box bg-green">
+                        <div class="inner">
+                        <h4>Banco:</h4>
+                        <p>N:{{@index}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-xs-6">
+                    <div class="small-box bg-green">
+                        <div class="inner">
+                        <h4>Dimensione:</h4>
+                        <p>{{gb this.size}} GB</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-xs-6">
+                    <div class="small-box bg-green">
+                        <div class="inner">
+                        <h4>Tipo:</h4>
+                        <p>{{exist this.type}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-xs-6">
+                    <div class="small-box bg-green">
+                        <div class="inner">
+                        <h4>Velocità:</h4>
+                        <p>{{exist this.clockSpeed}} Mhz</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-xs-6">
+                    <div class="small-box bg-green">
+                        <div class="inner">
+                        <h4>Produttore:</h4>
+                        <p>{{exist this.manufacturer}}</p>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+    </div>
+</div>

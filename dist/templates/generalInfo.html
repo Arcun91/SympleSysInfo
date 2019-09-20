@@ -1,0 +1,76 @@
+<div class="box">
+    <div class="box-header">
+        <i class="fa fa-{{icon}}"></i><h3 class="box-title">{{title}}</h3>
+    </div>
+    <div class="box-body chat" id="chat-box">
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-aqua">
+                    <div class="inner">
+                    <h4>Sistema Operativo:</h4>
+                    <p>{{platform}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-aqua">
+                    <div class="inner">
+                    <h4>Architettura:</h4>
+                    <p>{{os.arch}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-green">
+                    <div class="inner">
+                    <h4>Memoria Totale:</h4>
+                    <p>{{divideMemory memory.total}} MB</p>
+                    </div>
+                    <a href="#memory" id="memory" class="small-box-footer">Altre info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-green">
+                    <div class="inner">
+                    <h4>Memoria Disponibile:</h4>
+                    <p>{{divideMemory memory.available}} MB</p>
+                    </div>
+                    <a href="#memory" id="memory" class="small-box-footer">Altre info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-green">
+                    <div class="inner">
+                    <h4>Memoria Utilizzata:</h4>
+                    <p>{{divideMemory memory.active}} MB</p>
+                    </div>
+                    <a href="#memory" id="memory" class="small-box-footer">Altre info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-green">
+                    <div class="inner">
+                    <h4>Memoria Cache:</h4>
+                    <p>{{divideMemory memory.buffcache}} MB</p>
+                    </div>
+                    <a href="#memory" id="memory" class="small-box-footer">Altre info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-green">
+                    <div class="inner">
+                    <h4>Memoria Libera: </h4>
+                    <p>{{divideMemory memory.free}} MB</p>
+                    </div>
+                    <a href="#memory" id="memory" class="small-box-footer">Altre info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-aqua">
+                    <div class="inner">
+                    <h4>Acceso da:</h4>
+                    <p>{{minutes}} minuti e {{seconds}} secondi</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>

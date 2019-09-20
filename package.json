@@ -43,6 +43,7 @@
     "flot": "^0.8.0-alpha",
     "font-awesome": "^4.7.0",
     "fullcalendar": "^3.4.0",
+    "handlebars": "^4.1.1",
     "inputmask": "^3.3.7",
     "ion-rangeslider": "^2.2.0",
     "ionicons": "^3.0.0",
