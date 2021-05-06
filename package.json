@@ -61,6 +61,6 @@
     "select2": "^4.0.3",
     "slimscroll": "^0.9.1",
     "systeminformation": "^3.33.18",
-    "underscore": "^1.8.3"
+    "underscore": "^1.12.1"
   }
 }
